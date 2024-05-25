@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wheel of Fortune</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="card">
+            <div class="container">
+                <div class="banner">
+                    <h1>SPIN TO TOOLS</h1>
+                    <h3>Gagne de la connaissance d'outils</h3>
+                </div>
+                <div class="needle"></div>
+                <div class="wheel-slot-machine">
+                    <div class="wheel-container">
+                        <canvas id="wheel"></canvas>
+                    </div>
+
+                </div>
+                <div class="result-card">
+                    <div class="main-info">
+                        <div class="profile-img"></div>
+                        <div class="main-items">
+                            <h2 id="result">Alex Morrison</h2>
+                            <p>Senior Journalist</p>
+                        </div>
+                    </div>
+                    <div class="profile-info">
+
+                        <div class="stats">
+                            <div>
+                                <p>Catégorie</p>
+                                <p>34</p>
+                            </div>
+                            <div class=" stats-item">
+                                <p>Prix</p>
+                                <p>980</p>
+                            </div>
+                            <div class="stats-item">
+                                <p>Rating</p>
+                                <p>8.9</p>
+                            </div>
+                        </div>
+                        <div class="actions">
+                            <button class="chat">Voir</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="machine-container">
+            <div class="lever-container" id="lever">
+                <div class="lever"></div>
+                <div class="handle"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- New Card below the main card -->
+    <div class="card">
+        <div class="container">
+            <div class="banner">
+                <h1>LEADERBOARDS</h1>
+                <h3>Quelle équipe sera la 1ère à 1000 spins ?</h3>
+            </div>
+            <div class="result-card" id="second-result">
+                <div class="profile-img"></div>
+                <div class="profile-info">
+                    <h2>John Doe</h2>
+                    <p>Content Writer</p>
+                    <div class="stats">
+                        <div>
+                            <p>Articles</p>
+                            <p>45</p>
+                        </div>
+                        <div>
+                            <p>Followers</p>
+                            <p>1200</p>
+                        </div>
+                        <div>
+                            <p>Rating</p>
+                            <p>9.2</p>
+                        </div>
+                    </div>
+                    <div class="actions">
+                        <button class="chat">Chat</button>
+                        <button class="follow">Follow</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <audio id="spin-sound" src="sound.mp3"></audio>
+    <audio id="jackpot-sound" src="jackpot.mp3"></audio>
+    <script src="popup.js"></script>
+</body>
+
+</html>
