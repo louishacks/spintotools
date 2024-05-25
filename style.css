@@ -23,7 +23,7 @@
 
 body {
     margin: 0;
-    padding: 20px;
+    padding: 2vh;
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
@@ -86,17 +86,16 @@ body {
 
 .card {
     background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    width: 90%;
-    max-width: 600px;
+    border-radius: 1.5vw;
+    box-shadow: 0 0.4vw 0.8vw rgba(0, 0, 0, 0.5);
+    padding: 2vw;
+    width: 30vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     z-index: 10;
-    margin-bottom: 20px; 
+    margin-bottom: 5vh; 
 }
 
 .container {
@@ -108,15 +107,14 @@ body {
     display: inline-block;
     position: relative;
     background: linear-gradient(135deg, #ffcc00, #ff9900);
-    padding: 10px 30px;
-    border-radius: 5px;
-    margin-bottom: 20px;
+    padding: 1vw 3vw;
+    border-radius: 0.5vw;
     color: #fff;
     font-weight: bold;
-    font-size: 1em;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    transform: perspective(500px) rotateX(10deg);
+    font-size: 0.8vw;
+    text-shadow: 0.2vw 0.2vw 0.4vw rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0.8vw 1.6vw rgba(0, 0, 0, 0.3);
+    transform: perspective(50vw) rotateX(10deg);
 }
 
 .wheel-slot-machine {
@@ -129,19 +127,18 @@ body {
 
 .wheel-container {
     position: relative;
-    width: 100%;
-    padding-top: 100%; /* Maintain square aspect ratio */
-    max-width: 380px;
+    width: 70%;
+    padding-top: 70%; /* Maintain square aspect ratio */
+    max-width: 40vw;
     margin: 0 auto;
     border: solid;
-    border-width: 10px;
+    border-width: 1vw;
     border-color: #ff9900;
     border-radius: 50%;
     flex: 1 1 auto; /* Allow to grow and shrink */
 }
 
 .machine-container {
-    height: 150px;
     display: flex;
     flex: 0 1 auto; /* Allow to shrink but not grow */
     align-items: center;
@@ -149,11 +146,11 @@ body {
 
 .lever-container {
     position: relative;
-    top: -50px;
-    width: 20px; /* Width of the lever */
-    height: 150px; /* Height of the lever */
+    top: -5vw;
+    width: 2vw; /* Width of the lever */
+    height: 15vw; /* Height of the lever */
     transform-origin: bottom;
-    transform: rotate(18deg) translateX(-15px);
+    transform: rotate(18deg) translateX(-1.5vw);
     transition: transform 0.5s ease;
     cursor: pointer;
     transform-style: preserve-3d; 
@@ -162,22 +159,22 @@ body {
 
 .lever {
     position: absolute;
-    width: 20px; /* Width of the faces */
-    height: 150px; /* Height of the faces */
+    width: 2vw; /* Width of the faces */
+    height: 15vw; /* Height of the faces */
     background-color: #444;
     transform-origin: center;
-    border-radius: 10px; /* Round the corners to simulate a cylinder */
+    border-radius: 1vw; /* Round the corners to simulate a cylinder */
     transform-style: preserve-3d;
 }
 
 .handle {
-    width: 30px;
-    height: 30px;
+    width: 3vw;
+    height: 3vw;
     background-color: red;
     border-radius: 50%;
     position: absolute;
-    top: -15px;
-    left: -5px;
+    top: -1.5vw;
+    left: -0.5vw;
 }
 
 @keyframes fadeInUp {
@@ -200,29 +197,34 @@ canvas {
     height: 100%;
     border-radius: 50%;
 }
+.main {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+}
 
 .needle {
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 30px 20px 0px 20px;
+    border-width: 1.5vw 1vw 0px 1vw;
     border-color: red transparent transparent transparent;
     z-index: 1;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    left: 45%;
-    position: relative;
+    position: relative; /* Absolute positioning */
+    left: 50%; /* Position horizontally centered */
+    transform: translateX(-50%); /* Center the needle and rotate */
 }
 
+
 button {
-    padding: 10px 20px;
-    font-size: 20px;
+    padding: 1vw 2vw;
+    font-size: 2vw;
     cursor: pointer;
     background-color: #ff9900; /* Background color */
     color: white; /* Text color */
     border: none; /* Remove border */
-    border-radius: 10px; /* Round corners */
+    border-radius: 1vw; /* Round corners */
     transition: background-color 0.3s; /* Transition animation */
 }
 
@@ -234,13 +236,25 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    justify-content: s;
+    padding: 2vw;
     background: linear-gradient(135deg, #ffcc00, #ff9900);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 600px;
-    margin-top: 20px;
+    border-radius: 1vw;
+    box-shadow: 0 0.4vw 0.8vw rgba(0, 0, 0, 0.1);
+    margin-top: 1vh;
+    color: white;
+}
+
+.result-card-second {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vw;
+    background: linear-gradient(135deg, #ffcc00, #ff9900);
+    border-radius: 1vw;
+    box-shadow: 0 0.4vw 0.8vw rgba(0, 0, 0, 0.1);
+    margin-top: 2vh;
 }
 
 .main-info {
@@ -248,6 +262,10 @@ button:hover {
     flex-direction: row;
     justify-content: flex-start;
     width: 100%;
+}
+.main-items {
+    text-align: left;
+    margin-left: 3vw;
 }
 
 .profile-info {
@@ -271,7 +289,7 @@ button:hover {
 }
 
 .stats-item {
-    margin-left: 60px;
+    margin-left: 3vw;
 }
 
 .actions {
@@ -281,39 +299,22 @@ button:hover {
 }
 
 .profile-img {
-    width: 100px;
-    height: 100px;
-    border-radius: 10px;
+    width: 5vw;
+    height: 5vw;
+    border-radius: 1vw;
     background-image: url('background.jpg');
     background-size: cover;
     background-position: center;
 }
 
 @media (max-width: 600px) {
-    .banner {
-        font-size: 0.8em;
-        padding: 10px 20px;
+    .card {
+        width: 80vw;
     }
+}
 
-    .wheel-container {
-        width: 100%;
-        padding-top: 100%; /* Maintain square aspect ratio */
-    }
-
-    .lever-container {
-        top: -30px;
-    }
-
-    .result-card {
-        padding: 10px;
-    }
-
-    .profile-img {
-        width: 80px;
-        height: 80px;
-    }
-
-    .stats-item {
-        margin-left: 30px;
+@media (max-width: 787px) {
+    .card {
+        width: 80vw;
     }
 }
